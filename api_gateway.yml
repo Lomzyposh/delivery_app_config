@@ -14,22 +14,22 @@ spring:
 
       routes:
         - id: delivery_user_service
-          uri: lb://delivery_user_service
+          uri: lb://DELIVERY_USER_SERVICE
           predicates:
             - Path=/api/users/**,/api/auth/**
 
         - id: restaurant_service
-          uri: lb://restaurant_service
+          uri: lb://RESTAURANT_SERVICE
           predicates:
             - Path=/api/restaurants/**
 
         - id: meal_service
-          uri: lb://meal_service
+          uri: lb://MEAL_SERVICE
           predicates:
             - Path=/api/meals/**
 
         - id: order_service
-          uri: lb://order_service
+          uri: lb://ORDER_SERVICE
           predicates:
             - Path=/api/orders/**
 
