@@ -13,10 +13,10 @@ spring:
           lower-case-service-id: true
 
       routes:
-        - id: user_service
-          uri: lb://user_service
+        - id: delivery_user_service
+          uri: lb://delivery_user_service
           predicates:
-            - Path=/api/users/**
+            - Path=/api/users/**,/api/auth/**
 
         - id: restaurant_service
           uri: lb://restaurant_service
