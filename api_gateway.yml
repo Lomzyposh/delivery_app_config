@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: api-gateway
+    name: api_gateway
 
   cloud:
     gateway:
@@ -13,23 +13,23 @@ spring:
           lower-case-service-id: true
 
       routes:
-        - id: user-service
-          uri: lb://USER-SERVICE
+        - id: user_service
+          uri: lb://user_service
           predicates:
             - Path=/api/users/**
 
-        - id: restaurant-service
-          uri: lb://RESTAURANT-SERVICE
+        - id: restaurant_service
+          uri: lb://restaurant_service
           predicates:
             - Path=/api/restaurants/**
 
-        - id: meal-service
-          uri: lb://MEAL-SERVICE
+        - id: meal_service
+          uri: lb://meal_service
           predicates:
             - Path=/api/meals/**
 
-        - id: order-service
-          uri: lb://ORDER-SERVICE
+        - id: order_service
+          uri: lb://order_service
           predicates:
             - Path=/api/orders/**
 
